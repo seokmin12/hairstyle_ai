@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+			crossorigin="anonymous"
+		/>
+		
+
+		<title>헤어스타일 테스트</title>
+
+		<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="image/favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/switch.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/switch_btn.js"></script>
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fe596edb3d54187"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
+			<a class="navbar-brand" href="#">헤어스타일 테스트</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNav"
+				aria-controls="navbarNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li style="padding: 8px;">
+						<span>문의: dltjrals13@naver.com</span>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<section class="section">
+			<h1 class="title">헤어스타일 테스트</h1>
+			<h2 class="subtitle">나에게 맞는 헤어스타일은 무엇일까?<br>AI가 분석해 주는 나에게 어울리는 헤어스타일</h2>
+		</section>
+		<h3 style="text-align: center;">성별을 선택하세요</h3>
+		<section id="gender_chk">
+			<p>여자</p>
+			<label class="switch">
+				<input type="checkbox" id="gender">
+				<span class="slider round"></span>
+			</label>
+			<p>남자</p>
+		</section>
+
+		<script
+			class="jsbin"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<div class="container file-upload">
+			<div class="image-upload-wrap">
+				<input
+					class="file-upload-input"
+					type="file"
+					onchange="readURL(this);"
+					accept="image/*"
+				/>
+				<div class="drag-text">
+					<img src="image/upload.png" width="100" height="100" class="upload">
+					<h3 class="upload-text">당신의 얼굴을 올려 놓거나 업로드 하세요!</h3>
+				</div>
+			</div>
+			<div class="file-upload-content">
+				<img class="file-upload-image" id="face-image" src="#" alt="your image" />
+				<div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <p class="text-center">AI가 당신의 얼굴형을 분석중입니다...</p>
+            </div>
+				<p class="result-message"></p>
+				<div id="label-container"></div>
+				<div class="image-title-wrap">
+					<button type="button p-2" class="try-again-btn" onclick="window.location.reload();" style="margin-top: 20px;">
+                    <span class="try-again-text">다른 사진으로 재시도</span>
+					</button>
+				</div>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox" style="margin-top: 50px;"></div>
+			</div>
+		</div>
+		<div id="webcam-container"></div>
+		<div id="disqus_thread"></div>
+		<script>
+			/**
+			 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+			/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+			(function () {
+				// DON'T EDIT BELOW THIS LINE
+				var d = document,
+					s = d.createElement('script');
+				s.src = 'https://face-shape-test.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript
+			>Please enable JavaScript to view the
+			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+		>
+		<!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+			integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+		<script type="text/javascript">
+			// More API functions here:
+			// https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+			// the link to your model provided by Teachable Machine export panel
+			const URL = 'https://teachablemachine.withgoogle.com/models/BS4HSBBc7/';
+
+			let model, webcam, labelContainer, maxPredictions;
+
+			// Load the image model and setup the webcam
+			async function init() {
+				const modelURL = URL + 'model.json';
+				const metadataURL = URL + 'metadata.json';
+
+				// load the model and metadata
+				// Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+				// or files from your local hard drive
+				// Note: the pose library adds "tmImage" object to your window (window.tmImage)
+				model = await tmImage.load(modelURL, metadataURL);
+				maxPredictions = model.getTotalClasses();
+
+				labelContainer = document.getElementById('label-container');
+				for (let i = 0; i < maxPredictions; i++) {
+					// and class labels
+					labelContainer.appendChild(document.createElement('div'));
+				}
+			}
+
+			// run the webcam image through the image model
+			async function predict() {
+				// predict can take in an image, video or canvas html element
+				var image = document.getElementById('face-image');
+				const prediction = await model.predict(image, false);
+				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+				console.log(prediction[0].className);
+				var resultmessage;
+				if($('#gender').prop('checked') == false) {
+					switch (prediction[0].className) {
+					case '매력뿜뿜 각진형':
+						resultmessage = '단발 굵은 S컬펌, 미디엄 길이 레이어드 C컬펌,<br>애교머리에 자연스럽게 웨이브를 준 스타일이 잘 어울려요!<br><br>※ 피해야 할 스타일: 스트레이트 매직';
+						break;
+					case '축복받은 계란형':
+						resultmessage = '갸름한 얼굴형을 잘 보여줄 수 있는 포니테일,<br>컬이 들어간 레이어드 S컬펌이 잘 어울려요!<br><br>※ 피해야 할 스타일: 이마를 가리는 무거운 느낌의 뱅';
+						break;
+					case '동글동글 둥근형':
+						resultmessage = '시각적으로 갸름하게 보여주는 레이어드 C컬펌,<br>뿌리볼륨펌, 턱선까지 오거나 미디엄보다 긴 기장이 잘 어울려요!<br><br>※ 피해야 할 스타일: 미디엄 길이';
+						break;
+					default:
+					// code block
+					}
+				} else if($('#gender').prop('checked') == true) {
+					switch (prediction[0].className) {
+						case '매력뿜뿜 각진형':
+							resultmessage = '부드러운 인상을 주는 소프트 투 블록, 가르마펌,<br>리젠트 펌이나 이마를 드러내는 스타일이 잘 어울려요!<br><br>※ 피해야 할 스타일: 옆머리를 길러 광대뼈를 가리는 스타일';
+							break;
+						case '축복받은 계란형':
+							resultmessage = '모든 헤어스타일이 잘 어울리는 만인의 워너비!<br><br>※ 피해야 할 스타일: 앞머리를 내리거나 컬이 너무 많이 들어간 헤어';
+							break;
+						case '동글동글 둥근형':
+							resultmessage = '이마를 가리는 것보다는 드러내는 것이 좋고 짧게 자르는게 좋아요!<br>가르마 펌, 리젠트 펌같은 펌도 잘 어울려요!<br><br>※ 피해야 할 스타일: 옆머리와 뒷머리의 길이가 어중간한 헤어';
+							break;
+						default:
+						// code block
+					}
+				}
+				
+				$('.result-message').html(resultmessage);
+				for (let i = 0; i < maxPredictions; i++) {
+					const classPrediction =
+						prediction[i].className + ': ' +  Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+					labelContainer.childNodes[i].innerHTML = classPrediction;
+				}
+			}
+		</script>
+		<script>
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+
+					reader.onload = function (e) {
+						$('.image-upload-wrap').hide();
+						
+						$('#loading').show();
+
+						$('.file-upload-image').attr('src', e.target.result);
+						$('.file-upload-content').show();
+
+						$('.image-title').html(input.files[0].name);
+					};
+
+					reader.readAsDataURL(input.files[0]);
+					init().then(() => {
+						console.log('hello');
+						predict();
+						$('#loading').hide();
+					});
+				} else {
+					removeUpload();
+				}
+			}
+
+			function removeUpload() {
+				$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+				$('.file-upload-content').hide();
+				$('.image-upload-wrap').show();
+			}
+			$('.image-upload-wrap').bind('dragover', function () {
+				$('.image-upload-wrap').addClass('image-dropping');
+			});
+			$('.image-upload-wrap').bind('dragleave', function () {
+				$('.image-upload-wrap').removeClass('image-dropping');
+			});
+		</script>
+	</body>
+	<!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+</html>
