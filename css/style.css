@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Jua', sans-serif;
     background-color: #f0dbb0;
   }
   
@@ -7,7 +7,7 @@ body {
     border-radius: 10px;
     border: solid 1.5px #f6f7fa;
     background-color: #f0d689;
-    margin: 0 auto 200px auto;
+    margin: 0 auto 80px auto;
     padding: 10% 0;
   }
   
@@ -124,7 +124,6 @@ body {
       padding: 2.1% 7.7%;
   }
   .navbar-light .navbar-brand {
-      font-family: NanumSquareR;
       line-height: 1.68;
       text-align: left;
       color: #35465d;
@@ -138,18 +137,31 @@ body {
       margin-bottom: 80px;
   }
   .title{
-      font-family: NanumSquareR;
       line-height: 1.67;
       text-align: center;
       color: #35465d
   }
   .subtitle{
-      font-family: NanumSquareR;
       line-height: 1.53;
       text-align: center;
       color: #35465d;
       font-size: 1.5rem;
       margin-bottom:30px;
+  }
+
+  #ad_banner1 {
+    width: 320px;
+    margin: 0px auto 30px auto;
+  }
+
+  #ad_banner2 {
+    width: 320px;
+    margin: 0px auto 30px auto;
+  }
+
+  #ad_banner3 {
+    width: 728px;
+    margin: 0px auto 50px auto;
   }
   @media screen and (max-width: 600px){
       html{
