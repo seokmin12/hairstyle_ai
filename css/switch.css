@@ -29,6 +29,10 @@ section#gender_chk {
     transition: .4s;
 }
 
+.slider:focus {
+    outline: none;
+}
+
 .slider:before {
     position: absolute;
     content: "";

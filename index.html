@@ -8,6 +8,7 @@
 		<meta name="google-site-verification" content="ALAnNzDIlZzql1PP_HTT12hcofY3jTp05_ca5dH7-pc" />
 		<link rel="canonical" href="https://hairstyle-ai.ga">
 		<meta name="description" content="머신러닝으로&nbsp;학습시킨&nbsp;인공지능으로&nbsp;자신에게&nbsp;어울리는&nbsp;헤어스타일을&nbsp;찾아보세요!">
+		<meta name="keywords" content="헤어스타일 테스트, 인공지능 헤어스타일 테스트, 헤어스타일, 헤어스타일 추천, 남자 헤어스타일 추천, 여자 헤어스타일 추천, hairstyle test, hairstyle">
 		<meta property="og:title" content="헤어스타일 테스트">
 		<meta property="og:description" content="자신에게&nbsp;어울리는&nbsp;헤어스타일은&nbsp;모두&nbsp;다른법!&nbsp;머신러닝으로&nbsp;학습시킨&nbsp;인공지능으로...">
 		<meta property="og:image" content="https://ibb.co/Qmzy8PN">
@@ -33,12 +34,13 @@
 		<link rel="stylesheet" href="css/switch.css">
 		<script src="js/jquery.js"></script>
 		<script src="js/switch_btn.js"></script>
+		<script src="js/popup.js"></script>
 		<!-- Go to www.addthis.com/dashboard to customize your tools -->
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fe596edb3d54187"></script>
 	</head>
-	<body>
+	<body id="body">
 		<nav class="navbar navbar-expand-lg navbar-light nav-distance">
-			<a class="navbar-brand" href="#">헤어스타일 테스트</a>
+			<a class="navbar-brand" href="">헤어스타일 테스트</a>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -53,7 +55,7 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="https://hairstyle-ai.ga">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li style="padding: 8px;">
 						<span>문의: dltjrals13@naver.com</span>
@@ -61,10 +63,25 @@
 				</ul>
 			</div>
 		</nav>
+
+		<div id="mask"></div>
+		<div id="popup">
+			<div id="header">
+				<span id="title">안녕하세요</span>
+				<button id="close">
+					<span>X</span>
+				</button>
+			</div>
+			<div id="content">
+				
+			</div>
+		</div>
+
 		<section class="section">
 			<h1 class="title">헤어스타일 테스트</h1>
 			<h2 class="subtitle">나에게 맞는 헤어스타일은 무엇일까?<br>AI가 분석해 주는 나에게 어울리는 헤어스타일</h2>
 		</section>
+
 		<h3 style="text-align: center;">성별을 선택하세요</h3>
 		<section id="gender_chk">
 			<p>여자</p>
@@ -74,7 +91,7 @@
 			</label>
 			<p>남자</p>
 		</section>
-
+		
 		<script
 			class="jsbin"
 			src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">

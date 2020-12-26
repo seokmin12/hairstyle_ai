@@ -135,6 +135,8 @@ body {
   .section{
       margin-top: 50px;
       margin-bottom: 80px;
+      z-index: 1;
+      position: relative;
   }
   .title{
       line-height: 1.67;
@@ -147,6 +149,10 @@ body {
       color: #35465d;
       font-size: 1.5rem;
       margin-bottom:30px;
+  }
+
+  .addthis_inline_share_toolbox:focus {
+    outline: none;
   }
 
   #ad_banner1 {
@@ -163,6 +169,43 @@ body {
     width: 320px;
     margin: 0px auto 50px auto;
   }
+
+  div#popup {
+    background-color: #ffffff;
+    width: 28%;
+    height: 450px;
+    margin: auto;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    border-radius: 15px;
+  }
+
+  div#popup div#header {
+    width: 100%;
+    border-bottom: 1px dashed #222;
+    height: 60px;
+  }
+
+  div#popup div#header span#title {
+    padding-left: 20px;
+  }
+
+  button#close {
+    background-color: #ffffff;
+    border: 0px;
+    position: relative;
+    font-size: 25px;
+    float: right;
+    padding: 11px 8px 11px 8px;
+    border-radius: 15px;
+  }
+
+  button#close:focus {
+    outline: none;
+  }
+
   @media screen and (max-width: 600px){
       html{
           font-size: 10px;
