@@ -77,7 +77,12 @@ body {
   }
   
   .drag-text {
+    background-color: #ffffff;
     text-align: center;
+  }
+
+  .drag-text:hover {
+    background-color: #969ca9;
   }
   
   .drag-text h3 {
@@ -92,6 +97,10 @@ body {
     max-width: 200px;
     margin: auto;
     padding: 20px;
+  }
+
+  div#label-container div {
+    font-size: 23px;
   }
   
   .remove-image {
@@ -172,7 +181,6 @@ body {
 
   div#popup {
     background-color: #ffffff;
-    width: 500px;
     height: 450px;
     margin: auto;
     z-index: 2;
@@ -215,8 +223,8 @@ body {
       }
   }
 
-  ul#navbar-nav li span {
-    padding-left: 0px;
+  ul#navbar-nav li#email {
+    padding: 8px 8px 8px 0px;
   }
 
   .upload{
