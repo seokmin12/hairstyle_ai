@@ -214,6 +214,11 @@ body {
           font-size: 2rem;
       }
   }
+
+  ul#navbar-nav li span {
+    padding-left: 0px;
+  }
+
   .upload{
       margin-top: 30px;
       padding-top: 20px;
@@ -248,4 +253,5 @@ body {
 
   div#popup {
     width: 80%;
+    height: 400px;
   }
