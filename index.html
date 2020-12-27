@@ -24,8 +24,8 @@
 
 		<title>헤어스타일 테스트</title>
 
-		<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="image/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		
 		<link rel="preconnect" href="https://fonts.gstatic.com"> 
 		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
@@ -214,10 +214,24 @@
 				maxPredictions = model.getTotalClasses();
 
 				labelContainer = document.getElementById('label-container');
+
 				for (let i = 0; i < maxPredictions; i++) {
 					// and class labels
-					labelContainer.appendChild(document.createElement('div'));
+					var make_div = labelContainer.appendChild(document.createElement('div'));
+					make_div.setAttribute('id', 'result');
 				}
+				//*******************************
+				//* 퍼센트 바 만드는 중              *
+				//*								*
+				//*                             *
+				//*******************************
+
+
+				//for (let i = 0; i < maxPredictions; i++) {
+					//퍼센트 바 만들기
+					//var make_prog = labelContainer.appendChild(document.createElement('div'));
+					//make_prog.setAttribute('id', 'percent');
+				//}
 			}
 
 			// run the webcam image through the image model
@@ -257,12 +271,18 @@
 						// code block
 					}
 				}
-				
+
+
 				$('.result-message').html(resultmessage);
+				var result_div = document.getElementById('result')
+				var percent_div = document.getElementById('percent')
 				for (let i = 0; i < maxPredictions; i++) {
 					const classPrediction =
-						prediction[i].className + ': ' +  Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+						prediction[i].className + ": " + Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+					//const percent =
+						//Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
 					labelContainer.childNodes[i].innerHTML = classPrediction;
+					//labelContainer.childNodes[i+3].innerHTML = percent;
 				}
 			}
 		</script>
