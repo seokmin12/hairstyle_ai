@@ -176,6 +176,11 @@ body {
 
   #ad_banner3 {
     width: 320px;
+    margin: 0px auto 30px auto;
+  }
+
+  #ad_banner4 {
+    width: 320px;
     margin: 0px auto 50px auto;
   }
 
