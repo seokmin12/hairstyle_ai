@@ -63,19 +63,16 @@ ul.navbar-nav li#jocoding {
   border-radius: 20px;
 }
 
-.image-upload-wrap {
-  border: 4px dashed #1FB264;
+.image-upload-wrap { 
   position: relative;
   object-fit: contain;
   border-radius: 10px;
-  border: dashed 1.5px #35465d;
   background-color: #ffffff;
   width: 50%;
   margin: 0 auto;
-  background: #d9a7c7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  /* background: #d9a7c7;
+  background: -webkit-linear-gradient(to left, #fffcdc, #d9a7c7);
+  background: linear-gradient(to left, #fffcdc, #d9a7c7);  */
 }
 
 img.upload {
@@ -88,7 +85,7 @@ img.upload {
 .image-dropping,
 .image-upload-wrap:hover {
   background-color: #c6cdd7;
-  border: 1.5px dashed #ffffff;
+  border: 1.5px solid #ffffff;
 }
 
 .image-title-wrap {
