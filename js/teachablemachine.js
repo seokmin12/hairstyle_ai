@@ -1,6 +1,6 @@
 let URL;
-const maleurl = "https://teachablemachine.withgoogle.com/models/NQvqdYg6A/"; //남자 모델
-const femaleurl = "https://teachablemachine.withgoogle.com/models/R1Zg8K47E/"; //여자 모델
+const maleurl = "https://teachablemachine.withgoogle.com/models/54YEkhrlK/"; //남자 모델
+const femaleurl = "https://teachablemachine.withgoogle.com/models/xfsestsv3/"; //여자 모델
 let model, webcam, labelContainer, maxPredictions;
 async function init() {
     if ($('#gender').prop('checked') == false) {
