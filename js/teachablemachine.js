@@ -70,20 +70,23 @@ async function predict() {
             case '시크한 역삼각형':
                 resultmessage =
                     '윗머리와 옆머리는 자연스러운 구김 느낌이 나도록 펌을 하는 것이 중요하며<br>쉼표 머리, 히피 펌, 쉐도우 펌등이 잘 어울려요!<br><br>※ 피해야 할 스타일: 너무 짧은 헤어스타일';
+                resultimg = "<img src='image/upload.png' width='350' border='0'>"
             default:
                 //code block
         }
     }
 
     $('.result-message').html(resultmessage);
+    $('.image').html(resultimg);
     var result_div = document.getElementById('result')
     var percent_div = document.getElementById('percent')
-    for (let i = 0; i < maxPredictions; i++) {
-        const classPrediction =
-            prediction[i].className + ": " + Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
-        //const percent =
-        //Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
-        labelContainer.childNodes[i].innerHTML = classPrediction;
-        //labelContainer.childNodes[i+3].innerHTML = percent;
-    }
+
+    // for (let i = 0; i < maxPredictions; i++) {
+    //     const classPrediction =
+    //         prediction[i].className + ": " + Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+    //     //const percent =
+    //     //Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+    //     labelContainer.childNodes[i].innerHTML = classPrediction;
+    //     //labelContainer.childNodes[i+3].innerHTML = percent;
+    // }
 }
