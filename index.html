@@ -62,13 +62,13 @@
     <link rel="stylesheet" href="css/switch.css">
     <script src="js/jquery.js"></script>
     <script src="js/switch_btn.js"></script>
-    <!-- 팝업띄우는 스크립트 -->
     <!-- <script src="js/popup.js"></script> -->
 
     <title>헤어스타일 테스트</title>
 </head>
 
-<body>
+<body id="body">
+    <div id="mask"></div>
     <nav class="navbar navbar-expand-lg navbar-light nav-distance">
         <a class="navbar-brand" href="https://hairstyle-ai.ga">헤어스타일 테스트</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -86,6 +86,7 @@
                 <li id="jocoding">
                     <a href="https://animalface.site/ko/index.html">동물상 테스트 by 조코딩</a>
                 </li>
+                <li id="support"><a href="mailto:dltjrals13@naver.com">문의하기</a></li>
             </ul>
         </div>
     </nav>
@@ -108,11 +109,25 @@
         <div class="image-upload-wrap">
             <input class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
             <img src="image/upload.png" class="upload">
-            <div class="drag-text">
+        </div>
 
-                <!-- <h3 class="upload-text">당신의 얼굴을 올려 놓거나 업로드 하세요!</h3> -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">어울리는 스타일</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
             </div>
         </div>
+
+
+
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
             <div id="loading" class="animated bounce">
@@ -123,6 +138,7 @@
             </div>
             <p class="result-message"></p>
             <div class="image"></div>
+            <div class="btn"></div>
             <div id="label-container"></div>
             <div class="image-title-wrap">
                 <button type="button p-2" class="try-again-btn" onclick="window.location.reload();"
@@ -134,6 +150,7 @@
             <div class="addthis_inline_share_toolbox" style="margin-top: 50px;"></div>
         </div>
     </div>
+
     <!-- 광고 -->
     <div id="ad_banner1">
         <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-uZ2N1MZWHmByXCK8" data-ad-width="320"
@@ -152,8 +169,16 @@
             data-ad-height="100"></ins>
     </div>
     <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-	<div id="webcam-container"></div>
-	<div id="disqus_thread"></div>
+    <div id="webcam-container"></div>
+    <!-- <div id="disqus_thread"></div> -->
+    <footer id="footer">
+        <li id="copyright">
+            <p>헤어스타일 테스트 2021 ©</p>
+        </li>
+        <li id="not_save">
+            <p>본 사이트는 사진을 저장하거나 공유하지 않습니다.</p>
+        </li>
+    </footer>
 </body>
 <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

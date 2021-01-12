@@ -5,17 +5,29 @@ body {
     /* background-color: #f6f7fa; */
 }
 
+li {
+    list-style: none;
+}
+
 body {
     font-family: 'Jua', sans-serif;
-    /* background: linear-gradient( to right, #ffcfdf, #b0f3f1 74%); */
-    /* background: #d9a7c7;
-    background: -webkit-linear-gradient(to left, #fffcdc, #d9a7c7);
-    background: linear-gradient(to left, #fffcdc, #d9a7c7);
-   */
+}
 
+div#mask {
+    position:absolute;  
+    left:0;
+    top:0;
+    z-index:9000;  
+    background-color:#000;  
+    display:none;
+    opacity: 0.5;
 }
 
 ul.navbar-nav li#jocoding {
+    padding: 8px;
+}
+
+ul.navbar-nav li#support {
     padding: 8px;
 }
 
@@ -68,7 +80,7 @@ nav.navbar {
 }
 
 .file-upload {
-    border-radius: 10px;
+    border-radius: 40px;
     border: solid 1.5px #222;
     /* background: linear-gradient( to right, #ffcfdf, #b0f3f1 74%); */
     margin: 0 auto 80px auto;
@@ -225,6 +237,7 @@ div#label-container div {
     border-radius: 40px;
     border: solid 1.5px #35465d;
     background-color: #35465d;
+    outline: none;
 }
 
 .try-again-text {
@@ -278,11 +291,41 @@ button#close:focus {
     margin: auto;
 }
 
+#result_btn {
+    border-radius: 40px;
+    background-color: #ffcdaa;
+    outline: none;
+}
 
+button.close {
+    outline: none;
+    font-size: 25px;
+}
 
+h4.modal-title {
+    float: left;
+}
 
+div#myModal div.modal-content div.modal-body {
+    text-align: center;
+}
 
+footer#footer {
+    position: relative;
+    bottom: 0px;
+    border-top: 1px dashed #000;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
 
+footer#footer li p {
+    margin-top: 30px;
+}
+
+footer#footer li#not_save p {
+    font-size: 15px;
+}
 
 
 
@@ -303,11 +346,25 @@ button#close:focus {
         padding: 8px 8px 8px 0px;
     }
 
+    ul.navbar-nav li#support {
+        padding: 8px 8px 8px 0px;
+    }
+
     div.file-upload {
         width: 90%;
     }
 
+    img#result_img {
+        width: 80%;
+    }
+
     #disqus_thread {
         width: 100%;
+    }
+
+    div#myModal {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
