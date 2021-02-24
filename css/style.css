@@ -23,6 +23,10 @@ div#mask {
     opacity: 0.5;
 }
 
+ul.navbar-nav li#name {
+    padding: 8px;
+}
+
 ul.navbar-nav li#jocoding {
     padding: 8px;
 }
@@ -340,6 +344,10 @@ footer#footer li#not_save p {
 
     .image-upload-wrap {
         width: 85%;
+    }
+    
+    ul.navbar-nav li#name {
+        padding: 8px 8px 8px 0px;
     }
 
     ul.navbar-nav li#jocoding {
